@@ -2511,9 +2511,11 @@ local function getObjGen()
     local UIObjects = getObjects()
     UIObjects.Parent = script
 
-    for i, v in pairs(script.UIObjects:GetChildren()) do
-        v.Parent = v.Parent.Parent
-    end
+    pcall(function()
+        for i, v in pairs(script.UIObjects:GetChildren()) do
+            v.Parent = v.Parent.Parent
+        end
+    end)
 
     script.UIObjects:Destroy()
 
