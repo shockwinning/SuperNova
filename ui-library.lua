@@ -2515,9 +2515,9 @@ local function getObjGen()
         for i, v in pairs(script.UIObjects:GetChildren()) do
             v.Parent = v.Parent.Parent
         end
-    end)
 
-    script.UIObjects:Destroy()
+        script.UIObjects:Destroy()
+    end)
 
     function objGen.new(objectType, cheatName)
         if objectType == "Cheat" then
