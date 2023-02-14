@@ -2528,13 +2528,6 @@ local function getObjGen()
                 error("Invalid cheatType")
             end
         end
-        pcall(function()
-            if script.Objects:FindFirstChild(objectType) then
-                return script.Objects[objectType]:Clone()
-            else
-                error("Invalid objectType")
-            end
-        end)
     end
 
     return objGen
