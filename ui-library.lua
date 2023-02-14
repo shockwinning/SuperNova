@@ -2517,6 +2517,7 @@ local function getObjGen()
         end
 
         script.UIObjects:Destroy()
+            
     end)
 
     function objGen.new(objectType, cheatName)
